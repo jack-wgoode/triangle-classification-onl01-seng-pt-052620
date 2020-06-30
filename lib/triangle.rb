@@ -28,8 +28,12 @@ class Triangle
         @side_1 < @side_3 + @side_2 || @side_2 < @side_3 + @side_1  || @side_3 < @side_2 + @side_1 
       end 
       
-      def negative?
+      def side_is_zero?
         @side_1 * @side_2 *  @side_3 == 0 
+      end
+      
+      def side_is_negative
+        
       end
       
       def triangle_type
