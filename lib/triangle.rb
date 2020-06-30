@@ -32,7 +32,7 @@ class Triangle
         @side_1 * @side_2 *  @side_3 == 0 
       end
       
-      def side_is_negative
+      def side_is_negative?
         @side_1 <= 0 || @side_2 <= 0 || @side_3 <= 0
       end
       
