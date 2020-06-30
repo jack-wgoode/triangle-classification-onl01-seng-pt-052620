@@ -45,13 +45,9 @@ class Triangle
     def kind 
        if self.invalid?
        raise TriangleError
+      else
+       self.triangle_type
        
-       elsif self.eqilateral?
-        :equilateral
-      elsif self.isosceles
-        :isosceles
-      elsif self.scalene?
-        :scalene
       end
     end
      
