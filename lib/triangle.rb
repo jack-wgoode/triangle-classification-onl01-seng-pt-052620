@@ -46,16 +46,17 @@ class Triangle
        if self.invalid?
        raise TriangleError
        
-    else
-      if (@side_1 == @side_2) && (@side_2 == @side_3)
+       elsif eqilateral?
         :equilateral
-      elsif (@side_1 == @side_2) || (@side_2 == @side_3) || (@side_1 == @side_3)
+      elsif isosceles
         :isosceles
-      elsif (@side_1 != @side_2) && (@side_2 != @side_3) && (@side_1 != @side_3)
+      elsif scalene?
         :scalene
       end
     end
-     end
+     
+     
+     #end
    
       
       
