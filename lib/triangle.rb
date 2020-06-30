@@ -46,11 +46,11 @@ class Triangle
        if self.invalid?
        raise TriangleError
        
-       elsif eqilateral?
+       elsif self.eqilateral?
         :equilateral
-      elsif isosceles
+      elsif self.isosceles
         :isosceles
-      elsif scalene?
+      elsif self.scalene?
         :scalene
       end
     end
