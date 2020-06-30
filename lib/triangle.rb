@@ -21,7 +21,7 @@ class Triangle
       end
       
       def invalid?
-        self.inequality? || self.negative?
+        self.inequality? || self.side_is_negative? || self.side_is_zero?
       end
       
       def inequality? 
@@ -33,7 +33,7 @@ class Triangle
       end
       
       def side_is_negative
-        
+        @side_1 <= 0 || @side_2 <= 0 || @side_3 <= 0
       end
       
       def triangle_type
@@ -42,11 +42,10 @@ class Triangle
         return :scalene if self.scalene?
       end
       
-      def kind 
-       if self.negative?
-      raise TriangleError
-    elsif self.inequality?
-      raise TriangleError
+    def kind 
+       if self.invalid?
+       raise TriangleError
+       
     else
       if (@side_1 == @side_2) && (@side_2 == @side_3)
         :equilateral
